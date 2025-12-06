@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pujanam All-in-One Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,0..200" rel="stylesheet"/>
+
+<!-- Google Analytics (GA4) - REPLACED with provided ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-98QZYLPMMK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-98QZYLPMMK', {
+    page_path: window.location.pathname + window.location.search
+  });
+</script>
+
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#FF9933",
+              "secondary": "#2C3E50",
+              "background-light": "#F9F6F2",
+              "background-dark": "#101222",
+              "text-light": "#5D6D7E",
+              "text-dark": "#E0E0E0",
+              "accent": "#D4AF37",
+            },
+            fontFamily: {
+              "display": ["Manrope", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "0.75rem", "xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-6xl flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 dark:border-primary/30 px-6 lg:px-10 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50">
+  <div class="flex items-center gap-3">
+    <img src="Logo.png" alt="Pujanam Logo" class="h-8 w-auto" />
+    <h2 class="text-secondary dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+        Pujanam
+    </h2>
+</div>
+
+  <div class="hidden md:flex flex-1 justify-end gap-8">
+    <!-- Header button has .open-booking to open modal -->
+    <button id="header-book-btn" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity open-booking" type="button">
+      <span class="truncate">Book a Puja</span>
+    </button>
+  </div>
+
+  <div class="md:hidden">
+    <button class="text-secondary dark:text-white">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- HeroSection -->
+  <div class="@container py-16 sm:py-24">
+    <div class="@[480px]:p-4">
+      <div class="flex min-h-[520px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-center text-left px-6 py-12 @[480px]:px-12" data-alt="A serene image of a family participating in a traditional puja ceremony, with soft, warm lighting." style='background-image: linear-gradient(90deg, rgba(249, 246, 242, 0.9) 0%, rgba(249, 246, 242, 0.7) 50%, rgba(249, 246, 242, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXUHwjiZ_7zw5-Unm9923bVVObHXjMNYHgiB0YiTJ23eYzziUr7C99OVUnc_JtmGPxqS6OhuXeZfzmRTjuzGo4SDfALg1Fkcdw2qSyw2PPWyWP_joXz2YHB6iCKHjBRWyw2xI7JqoxONBmOncG-ivQ4gomHKcFQFWafAHHL0Bmcr5StAYQd9YLp32Ami5MkHM3rvVhrCEV6P-3LFFyVFJCMBwBjYw3X8P2PPj41Qltpqtk6LRxr56l_8_QScUx1DAKwdfEPMjXRxvy");'>
+        <div class="flex flex-col gap-4 max-w-xl">
+          <h1 class="text-secondary dark:text-secondary text-4xl font-black leading-tight tracking-tight @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight">
+            Your All-in-One Solution for Stress-Free, Meaningful Pujas
+          </h1>
+          <p class="text-text-light dark:text-text-light text-base font-normal leading-relaxed @[480px]:text-lg @[480px]:font-normal @[480px]:leading-relaxed">
+            From finding a priest to understanding the ritual and managing the cleanup, Pujanam handles every step so you can focus on your devotion.
+          </p>
+        </div>
+
+        <!-- Hero CTA opens the booking modal -->
+        <button class="hero-book-btn open-booking flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 @[480px]:h-14 @[480px]:px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] @[480px]:text-lg @[480px]:font-bold hover:opacity-90 transition-opacity" type="button">
+          <span class="truncate">Book Your Puja Today</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FeatureSection -->
+  <div class="flex flex-col gap-12 px-4 py-16 sm:py-24 @container">
+    <div class="flex flex-col gap-4 text-center items-center">
+      <h2 class="text-secondary dark:text-white text-3xl font-bold leading-tight tracking-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight max-w-3xl">
+        Experience the Pujanam Difference: Five Services, One App
+      </h2>
+      <p class="text-text-light dark:text-text-dark text-base font-normal leading-relaxed max-w-3xl @[480px]:text-lg">
+        We’ve removed the common hassles of organizing a ceremony by combining logistics, spiritual guidance, and convenience into a single platform.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-0">
+      <div class="flex flex-1 gap-4 rounded-xl border border-primary/20 bg-white dark:bg-background-dark/50 dark:border-primary/30 p-6 flex-col items-start text-left">
+        <div class="text-primary bg-primary/10 p-3 rounded-lg">
+          <span class="material-symbols-outlined text-3xl">groups</span>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="text-secondary dark:text-white text-xl font-bold leading-tight">Effortless Booking &amp; Supplies</h3>
+          <p class="text-text-light dark:text-text-dark text-sm font-normal leading-normal">Verified Pandits at Your Fingertips &amp; Zero-Worry Samagri.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-1 gap-4 rounded-xl border border-primary/20 bg-white dark:bg-background-dark/50 dark:border-primary/30 p-6 flex-col items-start text-left">
+        <div class="text-primary bg-primary/10 p-3 rounded-lg">
+          <span class="material-symbols-outlined text-3xl">psychology</span>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="text-secondary dark:text-white text-xl font-bold leading-tight">Spiritual Clarity with AI</h3>
+          <p class="text-text-light dark:text-text-dark text-sm font-normal leading-normal">Know the 'Why' behind rituals &amp; get a Daily Devotional Assistant.</p>
+        </div>
+      </div>
+
+      <div class="flex flex-1 gap-4 rounded-xl border border-primary/20 bg-white dark:bg-background-dark/50 dark:border-primary/30 p-6 flex-col items-start text-left">
+        <div class="text-primary bg-primary/10 p-3 rounded-lg">
+          <span class="material-symbols-outlined text-3xl">cleaning_services</span>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="text-secondary dark:text-white text-xl font-bold leading-tight">Complete Post-Puja Disposal</h3>
+          <p class="text-text-light dark:text-text-dark text-sm font-normal leading-normal">Respectful Cleanup Guaranteed for all sacred items.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTASection -->
+  <div class="@container bg-white dark:bg-background-dark/50 rounded-xl my-16 sm:my-24">
+    <div class="flex flex-col items-center justify-end gap-6 px-4 py-16 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
+      <div class="flex flex-col gap-2 text-center">
+        <h2 class="text-secondary dark:text-white text-3xl font-bold leading-tight tracking-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight max-w-3xl">
+          Pujanam is more than an app; it’s your trusted partner in faith, making complex traditions simple and rewarding.
+        </h2>
+      </div>
+      <div class="flex flex-1 justify-center mt-4">
+        <div class="flex justify-center">
+          <!-- CTA that opens the booking modal -->
+          <button id="cta-book-btn" class="open-booking flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 @[480px]:h-14 @[480px]:px-8 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] @[480px]:text-lg @[480px]:font-bold hover:opacity-90 transition-opacity" type="button">
+            <span class="truncate">Book a Puja</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NEW: Booking Modal (Form) ===== -->
+  <!-- Modal overlay -->
+  <div id="booking-modal" class="fixed inset-0 z-60 hidden items-center justify-center px-4 py-8" aria-hidden="true" role="dialog" aria-modal="true">
+    <div id="booking-modal-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+    <!-- Modal panel -->
+    <div class="relative max-w-2xl w-full bg-white dark:bg-background-dark/80 rounded-xl shadow-xl p-6 z-70">
+      <div class="flex items-start justify-between gap-4">
+        <div>
+          <h3 class="text-secondary dark:text-white text-xl font-bold">Book My Pooja</h3>
+          <p class="text-text-light dark:text-text-dark text-sm mt-1">Fill in details and we'll get back to you shortly.</p>
+        </div>
+        <button id="close-modal" aria-label="Close" class="text-text-light dark:text-text-dark">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+
+      <form id="booking-form" class="mt-4 grid grid-cols-1 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm text-text-light dark:text-text-dark">Full name</label>
+            <input required name="name" type="text" class="mt-1 w-full rounded-lg border border-primary/20 p-3 bg-white dark:bg-background-dark/60" placeholder="e.g. Ramesh Kumar" />
+          </div>
+          <div>
+            <label class="text-sm text-text-light dark:text-text-dark">Phone</label>
+            <input name="phone" type="tel" class="mt-1 w-full rounded-lg border border-primary/20 p-3 bg-white dark:bg-background-dark/60" placeholder="+91 98XXXXXXXX" />
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="text-sm text-text-light dark:text-text-dark">Email</label>
+            <input name="email" type="email" class="mt-1 w-full rounded-lg border border-primary/20 p-3 bg-white dark:bg-background-dark/60" placeholder="you@example.com" />
+          </div>
+          <div>
+            <label class="text-sm text-text-light dark:text-text-dark">Preferred date</label>
+            <input name="date" type="date" class="mt-1 w-full rounded-lg border border-primary/20 p-3 bg-white dark:bg-background-dark/60" />
+          </div>
+        </div>
+
+        <div>
+          <label class="text-sm text-text-light dark:text-text-dark">Puja type</label>
+          <select name="puja_type" class="mt-1 w-full rounded-lg border border-primary/20 p-3 bg-white dark:bg-background-dark/60">
+            <option value="">Select</option>
+            <option>Griha Pravesh</option>
+            <option>Satyanarayan</option>
+            <option>Navagraha Shanti</option>
+            <option>Custom / Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="text-sm text-text-light dark:text-text-dark">Message / Notes</label>
+          <textarea name="message" rows="3" class="mt-1 w-full rounded-lg border border-primary/20 p-3 bg-white dark:bg-background-dark/60" placeholder="Any specific requests..."></textarea>
+        </div>
+
+        <!-- Response area -->
+        <div id="form-feedback" class="min-h-[40px]"></div>
+
+        <div class="flex items-center gap-3 justify-end">
+          <button type="button" id="modal-cancel" class="px-4 py-2 rounded-lg border border-primary/20 bg-white text-text-light hover:bg-primary/10">Cancel</button>
+          <button id="booking-submit" type="submit" class="px-6 py-2 rounded-lg bg-primary text-white font-bold">
+            <span id="booking-submit-text">Submit & Notify</span>
+            <svg id="booking-spinner" class="hidden animate-spin w-5 h-5 inline-block ml-2" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== NEW: YouTube explanatory video section ===== -->
+  <section class="px-4 py-12 @container">
+    <div class="max-w-4xl mx-auto bg-white dark:bg-background-dark/60 rounded-xl p-6">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-secondary dark:text-white text-2xl font-bold">How Pujanam Works</h2>
+        <p class="text-text-light dark:text-text-dark">Short walkthrough video explaining the product, booking flow and what to expect.</p>
+        <div class="mt-4 aspect-video rounded-lg overflow-hidden">
+          <!-- Replace the src below with your YouTube video ID if you want -->
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Pujanam product walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="flex flex-col gap-8 px-5 py-10 text-center @container border-t border-primary/20 dark:border-primary/30 mt-16 sm:mt-24">
+    <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 @[480px]:flex-row @[480px]:justify-around">
+      <a class="text-text-light dark:text-text-dark text-base font-normal leading-normal min-w-40 hover:text-primary dark:hover:text-primary" href="#">Services</a>
+      <a class="text-text-light dark:text-text-dark text-base font-normal leading-normal min-w-40 hover:text-primary dark:hover:text-primary" href="#">About Us</a>
+      <a class="text-text-light dark:text-text-dark text-base font-normal leading-normal min-w-40 hover:text-primary dark:hover:text-primary" href="#">Contact</a>
+      <a class="text-text-light dark:text-text-dark text-base font-normal leading-normal min-w-40 hover:text-primary dark:hover:text-primary" href="#">Terms of Service</a>
+      <a class="text-text-light dark:text-text-dark text-base font-normal leading-normal min-w-40 hover:text-primary dark:hover:text-primary" href="#">Privacy Policy</a>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6">
+      <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary" href="#">
+        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+      </a>
+      <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary" href="#">
+        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm6.406-11.845a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z" fill-rule="evenodd"></path></svg>
+      </a>
+      <a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary" href="#">
+        <svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+      </a>
+    </div>
+    <p class="text-text-light dark:text-text-dark text-base font-normal leading-normal">© 2024 Pujanam. All rights reserved.</p>
+  </footer>
+</main>
+</div>
+</div>
+</div>
+
+<!-- ===== Integration Script: modal open/close, form submit to Zapier webhook, GA event ===== -->
+<script>
+(function(){
+  // ===== CONFIG - Zapier webhook set to provided URL =====
+  const ZAPIER_WEBHOOK_URL = "https://hooks.zapier.com/hooks/catch/25616687/uf2vokz/";
+  const SITE_NAME = "Pujanam";
+  // =============================================================
+
+  // Utility: parse UTM params
+  function getUtm() {
+    const params = new URLSearchParams(window.location.search);
+    const utm = {};
+    ['utm_source','utm_medium','utm_campaign','utm_term','utm_content'].forEach(k=>{
+      if (params.get(k)) utm[k] = params.get(k);
+    });
+    return utm;
+  }
+
+  // Modal logic
+  const modal = document.getElementById('booking-modal');
+  const backdrop = document.getElementById('booking-modal-backdrop');
+  const openButtons = Array.from(document.querySelectorAll('.open-booking'));
+  const closeBtn = document.getElementById('close-modal');
+  const cancelBtn = document.getElementById('modal-cancel');
+
+  function openModal(){
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    modal.setAttribute('aria-hidden','false');
+    // focus first input
+    setTimeout(()=> {
+      const firstInput = modal.querySelector('input[name="name"]');
+      if(firstInput) firstInput.focus();
+    }, 50);
+  }
+  function closeModal(){
+    modal.classList.remove('flex');
+    modal.classList.add('hidden');
+    modal.setAttribute('aria-hidden','true');
+  }
+
+  openButtons.forEach(btn => btn.addEventListener('click', openModal));
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+  // close when clicking backdrop
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+
+  // Form handling
+  const form = document.getElementById('booking-form');
+  const feedback = document.getElementById('form-feedback');
+  const submitBtn = document.getElementById('booking-submit');
+  const submitText = document.getElementById('booking-submit-text');
+  const spinner = document.getElementById('booking-spinner');
+
+  function setLoading(isLoading) {
+    if (isLoading) {
+      spinner.classList.remove('hidden');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-80','cursor-not-allowed');
+    } else {
+      spinner.classList.add('hidden');
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('opacity-80','cursor-not-allowed');
+    }
+  }
+
+  // GA event helper (if gtag present)
+  function sendGaEvent(action, label, value) {
+    if (typeof gtag === 'function') {
+      try {
+        gtag('event', action, {
+          event_label: label,
+          event_category: 'engagement',
+          value: value || 1
+        });
+        console.log('[GA] event sent:', action, label);
+      } catch (e) {
+        console.warn('[GA] gtag error', e);
+      }
+    }
+  }
+
+  async function postToZapier(data) {
+    if (!ZAPIER_WEBHOOK_URL) {
+      throw new Error('Zapier webhook URL is not configured.');
+    }
+    const res = await fetch(ZAPIER_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    if (!res.ok) {
+      const text = await res.text().catch(()=>res.statusText);
+      throw new Error('Zapier responded with ' + res.status + ' - ' + text);
+    }
+    return res;
+  }
+
+  // --- Replace your existing form submit handler with this block ---
+// --- Replace your existing form submit handler with this version ---
+form.addEventListener('submit', function (ev) {
+  ev.preventDefault();
+
+  // Collect form data
+  const fd = new FormData(form);
+  const payload = Object.fromEntries(fd.entries());
+  payload.site = SITE_NAME;
+  payload.timestamp = new Date().toISOString();
+  payload.page = window.location.href;
+  payload.userAgent = navigator.userAgent;
+  payload.utm = getUtm();
+
+  // ---- 1) SEND TO ZAPIER IN BACKGROUND ----
+  const json = JSON.stringify(payload);
+  const blob = new Blob([json], { type: 'application/json' });
+
+  let sent = false;
+
+  // Try sendBeacon first (best for background sending)
+  try {
+    if (navigator.sendBeacon) {
+      sent = navigator.sendBeacon(ZAPIER_WEBHOOK_URL, blob);
+      console.log("Beacon sent?", sent);
+    }
+  } catch (e) {
+    console.warn("sendBeacon failed:", e);
+  }
+
+  // If beacon not used, fallback to a no-cors fetch
+  if (!sent) {
+    fetch(ZAPIER_WEBHOOK_URL, {
+      method: "POST",
+      body: json,
+      headers: { "Content-Type": "application/json" },
+      mode: "no-cors",
+      keepalive: true
+    }).then(() => {
+      console.log("Background fetch attempted");
+    }).catch((err) => {
+      console.warn("Background fetch failed:", err);
+    });
+  }
+
+  // ---- 2) Redirect user instantly to thank-you page ----
+  window.location.href = "after.html";  // <-- change path if needed
+});
+
+
+
+  // initialize - just a log
+  console.log('[Booking] init. Zapier webhook configured');
+})();
+</script>
+</body></html>
