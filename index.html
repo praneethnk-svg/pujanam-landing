@@ -57,12 +57,14 @@
 <div class="layout-content-container flex flex-col max-w-6xl flex-1">
 <!-- TopNavBar -->
 <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 dark:border-primary/30 px-6 lg:px-10 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm sticky top-0 z-50">
-  <div class="flex items-center gap-3">
-    <img src="Logo.png" alt="Pujanam Logo" class="h-8 w-auto" />
-    <h2 class="text-secondary dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
-        Pujanam
-    </h2>
+  <div class="flex items-center gap-4">
+    <!-- Logo (increase h-10 or go bigger with h-12 depending on your preference) -->
+    <img src="logo.png" alt="Pujanam Logo" class="h-12 w-auto" />
+
+    <!-- Bigger, stronger title text -->
+   <h2 class="text-3xl font-black">Pujanam</h2>
 </div>
+
 
   <div class="hidden md:flex flex-1 justify-end gap-8">
     <!-- Header button has .open-booking to open modal -->
@@ -80,7 +82,7 @@
 
 <main>
   <!-- HeroSection -->
-  <div class="@container py-16 sm:py-24">
+  <div class="@container pt-6 pb-12 sm:pt-10 sm:pb-16">
     <div class="@[480px]:p-4">
       <div class="flex min-h-[520px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-start justify-center text-left px-6 py-12 @[480px]:px-12" data-alt="A serene image of a family participating in a traditional puja ceremony, with soft, warm lighting." style='background-image: linear-gradient(90deg, rgba(249, 246, 242, 0.9) 0%, rgba(249, 246, 242, 0.7) 50%, rgba(249, 246, 242, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXUHwjiZ_7zw5-Unm9923bVVObHXjMNYHgiB0YiTJ23eYzziUr7C99OVUnc_JtmGPxqS6OhuXeZfzmRTjuzGo4SDfALg1Fkcdw2qSyw2PPWyWP_joXz2YHB6iCKHjBRWyw2xI7JqoxONBmOncG-ivQ4gomHKcFQFWafAHHL0Bmcr5StAYQd9YLp32Ami5MkHM3rvVhrCEV6P-3LFFyVFJCMBwBjYw3X8P2PPj41Qltpqtk6LRxr56l_8_QScUx1DAKwdfEPMjXRxvy");'>
         <div class="flex flex-col gap-4 max-w-xl">
@@ -101,7 +103,8 @@
   </div>
 
   <!-- FeatureSection -->
-  <div class="flex flex-col gap-12 px-4 py-16 sm:py-24 @container">
+  <div class="flex flex-col gap-10 px-4 pt-8 pb-12 sm:pt-10 sm:pb-16 @container">
+
     <div class="flex flex-col gap-4 text-center items-center">
       <h2 class="text-secondary dark:text-white text-3xl font-bold leading-tight tracking-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight max-w-3xl">
         Experience the Pujanam Difference: Five Services, One App
